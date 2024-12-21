@@ -264,9 +264,9 @@ const names = [
 
 const container = document.getElementById("namesContainer");
 
-names.forEach(person => {
-  const div = document.createElement('div');
-  div.classList.add('person');
+names.forEach((person) => {
+  const div = document.createElement("div");
+  div.classList.add("person");
   div.classList.add(person.gender);
   div.textContent = person.name;
   namesContainer.appendChild(div);
