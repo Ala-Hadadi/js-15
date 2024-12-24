@@ -31,7 +31,7 @@ body {
   
   .rectangle {
     width: 60px;
-    height: 60px;
+    height: 80px;
     background-color: #ddd;
     border: 2px solid #bbb;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

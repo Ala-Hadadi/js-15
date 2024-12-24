@@ -17,15 +17,6 @@ rgba(93, 18, 199, 1)
 rgba(93, 18, 199, 1)
 */
 
-const colors = [
-  [31, 127, 102, 1],
-  [255, 200, 0, 1],
-  [255, 123, 0, 1],
-  [216, 1, 1, 1],
-  [223, 4, 70, 1],
-  [127, 31, 85, 1],
-];
-
 const first = document.querySelector(".first");
 first.style.backgroundColor = "rgba(31, 127, 102, 1)";
 
@@ -50,44 +41,57 @@ seventh.style.backgroundColor = "rgba(93, 18, 199, 1)";
 const circles = document.querySelectorAll(".circle");
 const rectangles = document.querySelectorAll(".rectangle");
 
-first.addEventListener("click", function () {
-  rectangles.forEach((rec) => {
-    rec.style.backgroundColor = "rgba(31, 127, 102, 1)";
-  });
-});
-
-second.addEventListener("click", function () {
-  rectangles.forEach((rec) => {
-    rec.style.backgroundColor = "rgba(255, 200, 0, 1)";
-  });
-});
-
-third.addEventListener("click", function () {
-  rectangles.forEach((rec) => {
-    rec.style.backgroundColor = "rgba(255, 123, 0, 1)";
-  });
-});
-
-fourth.addEventListener("click", function () {
-  rectangles.forEach((rec) => {
-    rec.style.backgroundColor = "rgba(216, 1, 1, 1)";
-  });
-});
-
-fifth.addEventListener("click", function () {
-  rectangles.forEach((rec) => {
-    rec.style.backgroundColor = "rgba(223, 4, 70, 1)";
-  });
-});
-
-sixth.addEventListener("click", function () {
-  rectangles.forEach((rec) => {
-    rec.style.backgroundColor = "rgba(127, 31, 85, 1) ";
-  });
-});
-
-seventh.addEventListener("click", function () {
-  rectangles.forEach((rec) => {
-    rec.style.backgroundColor = "rgba(93, 18, 199, 1)";
+circles.forEach((circle) => {
+  circle.addEventListener("click", function () {
+    if (circle.classList.contains("first")) {
+      let opacity = 1;
+      rectangles.forEach((rec) => {
+        rec.style.backgroundColor = "rgb(31, 127, 102)";
+        rec.style.opacity = `${opacity}`;
+        opacity = opacity - 0.15;
+      });
+    } else if (circle.classList.contains("second")) {
+      let opacity = 1;
+      rectangles.forEach((rec) => {
+        rec.style.backgroundColor = "rgb(255, 200, 0)";
+        rec.style.opacity = `${opacity}`;
+        opacity = opacity - 0.15;
+      });
+    } else if (circle.classList.contains("third")) {
+      let opacity = 1;
+      rectangles.forEach((rec) => {
+        rec.style.backgroundColor = "rgb(255, 123, 0)";
+        rec.style.opacity = `${opacity}`;
+        opacity = opacity - 0.15;
+      });
+    } else if (circle.classList.contains("fourth")) {
+      let opacity = 1;
+      rectangles.forEach((rec) => {
+        rec.style.backgroundColor = "rgb(216, 1, 1)";
+        rec.style.opacity = `${opacity}`;
+        opacity = opacity - 0.15;
+      });
+    } else if (circle.classList.contains("fifth")) {
+      let opacity = 1;
+      rectangles.forEach((rec) => {
+        rec.style.backgroundColor = "rgb(223, 4, 70)";
+        rec.style.opacity = `${opacity}`;
+        opacity = opacity - 0.15;
+      });
+    } else if (circle.classList.contains("sixth")) {
+      let opacity = 1;
+      rectangles.forEach((rec) => {
+        rec.style.backgroundColor = "rgb(127, 31, 85) ";
+        rec.style.opacity = `${opacity}`;
+        opacity = opacity - 0.15;
+      });
+    } else if (circle.classList.contains("seventh")) {
+      let opacity = 1;
+      rectangles.forEach((rec) => {
+        rec.style.backgroundColor = "rgb(93, 18, 199)";
+        rec.style.opacity = `${opacity}`;
+        opacity = opacity - 0.15;
+      });
+    }
   });
 });
